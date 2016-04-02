@@ -1,2 +1,2 @@
-# COS424A3
-COS424 Assignent 3
+# Assignment3_Bitcoin
+Bitcoin
