@@ -1,9 +1,10 @@
-allprob = zeros(10000,3);
+allprobnew = zeros(10000,3);
 tic
 for i = 1:10000
     testx = toTest(i,1);
     testy = toTest(i,2);
     prob = 0;
+    count = 0;
     for j = 1:3348026
         trainx = txcopy(j,1);
         trainy = txcopy(j,2);
@@ -11,6 +12,7 @@ for i = 1:10000
         sep = [testx-trainx testy-trainy];
         value = 0;
         if norm(sep) < 1000
+            count = count + 1;
             mu = [trainx trainy];
             sigma = [trainv 0; 0 trainv];
         
@@ -19,10 +21,11 @@ for i = 1:10000
         end
         prob = prob + value;
     end
+    prob = prob / count;
     if mod(i,10) == 0
         disp(i)
         toc
     end
-    allprob(i,:) = [testx testy prob];
+    allprobnew(i,:) = [testx testy prob];
 end
         
