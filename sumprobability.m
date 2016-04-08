@@ -22,7 +22,7 @@ for i = 1:10000
         prob = prob + value;
     end
     prob = prob / count;
-    if mod(i,10) == 0
+    if mod(i,100) == 0
         disp(i)
         toc
     end
