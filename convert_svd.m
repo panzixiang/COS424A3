@@ -5,9 +5,10 @@
 % multiply components
 V = V.';
 U = sparse(U);
-V=sparse(V);
-S=sparse(S);
-svd_probs = U*S*V;
+V = sparse(V);
+S = sparse(S);
+%svd_probs = U*S*V;
+coeff = U*S;
 %V = V.';
 %V=sparse(V);
 %svd_probs_final = svd_probs*V;
