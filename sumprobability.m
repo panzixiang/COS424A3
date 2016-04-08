@@ -1,10 +1,10 @@
 allprob = zeros(10000,3);
 
-for i = 1:1
+for i = 1:10000
     testx = toTest(i,1);
     testy = toTest(i,2);
     prob = 0;
-    for j = 1:1
+    for j = 1:3348026
         trainx = txcopy(j,1);
         trainy = txcopy(j,2);
         trainv = txcopy(j,3);
